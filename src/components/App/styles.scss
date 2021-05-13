@@ -1,0 +1,23 @@
+@import '../../styles/vars';
+
+.app {
+  font-family: $font-family;
+  font-size: $font-size-homepage;
+  background-color: var(--theme-background);
+}
+
+// THEMES
+
+.light {
+  --theme-text: hsl(200, 15%, 8%);
+  --theme-input: hsl(0, 0%, 52%);
+  --theme-background: hsl(0, 0%, 96%);
+  --theme-elements: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --theme-text: hsl(0, 0%, 100%);
+  --theme-input: hsl(209, 23%, 22%);
+  --theme-background: hsl(207, 26%, 17%);
+  --theme-elements: hsl(209, 23%, 22%);
+}

@@ -1,15 +1,33 @@
 // == Import npm
-import React from 'react';
+import React, { useState } from 'react';
 
 // == Import
-import './styles.css';
+import Header from '../Header';
+import Main from '../Main';
+import './styles.scss';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <h1>App</h1>
-  </div>
-);
+const App = () => {
+  const [theme, setTheme] = useState(window.localStorage.getItem('theme') || 'light');
+
+  function handleClick() {
+    if (theme === 'dark') {
+      window.localStorage.setItem('theme', 'light');
+      setTheme('light');
+    }
+    else {
+      window.localStorage.setItem('theme', 'dark');
+      setTheme('dark');
+    }
+  }
+
+  return (
+    <div className={`app ${theme}`}>
+      <Header handleClick={handleClick} />
+      <Main />
+    </div>
+  );
+};
 
 // == Export
 export default App;

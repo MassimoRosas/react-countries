@@ -1,0 +1,29 @@
+@import '../../../styles/vars';
+
+.searchform {
+  padding: 1em 2em;
+  background-color: var(--theme-elements);
+  margin: 1.5em 1em;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  color: var(--theme-input);
+
+  .searchform-icon {
+    width: 3em;
+    color: var(--theme-text);
+  }
+
+  .searchform-input {
+    padding: 0;
+    height: 2em;
+    border: none;
+    background-color: var(--theme-elements);
+    color: var(--theme-text);
+
+    &::placeholder {
+      color: var(--theme-text);
+      background-color: var(--theme-elements);
+    }
+  }
+}
