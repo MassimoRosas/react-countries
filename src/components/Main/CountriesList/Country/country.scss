@@ -28,7 +28,11 @@
         margin-bottom: 0.5em;
       }
     }
+  }
+}
 
-    
+@media screen and (min-width: 1440px) {
+  .country {
+    width: 21%;
   }
 }

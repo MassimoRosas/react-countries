@@ -1,7 +1,7 @@
 @import '../../../styles/vars';
 
 .searchform {
-  padding: 1em 2em;
+  padding: 1em 2.5em;
   background-color: var(--theme-elements);
   margin: 1.5em 1em;
   border-radius: 0.5em;
@@ -26,5 +26,11 @@
       color: var(--theme-text);
       background-color: var(--theme-elements);
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .searchform {
+    width: 35em;
   }
 }

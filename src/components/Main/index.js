@@ -8,8 +8,10 @@ import './main.scss';
 
 const Main = () => (
   <main className="main">
-    <SearchForm />
-    <FilterForm />
+    <div className="main-forms">
+      <SearchForm />
+      <FilterForm />
+    </div>
     <CountriesList />
   </main>
 );

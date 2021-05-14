@@ -26,3 +26,10 @@
     font-weight: $font-weight-medium;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 2em 5em;
+    font-size: $font-size-detail;
+  }
+}
