@@ -2,7 +2,7 @@ import React from 'react';
 
 import SearchForm from './SearchForm';
 import FilterForm from './FilterForm';
-import CountriesList from './CountriesList';
+import CountriesList from '../../containers/CountriesList';
 
 import './main.scss';
 

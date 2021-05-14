@@ -55,9 +55,14 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "prop-types": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9"
   },
   "version": "1.0.0",
   "description": "REST Countries API with color theme switcher",
