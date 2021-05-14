@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SearchForm from './SearchForm';
-import FilterForm from './FilterForm';
+import FilterForm from '../../containers/FilterForm';
 import CountriesList from '../../containers/CountriesList';
 
 import './main.scss';
