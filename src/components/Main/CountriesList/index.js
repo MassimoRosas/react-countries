@@ -4,8 +4,7 @@ import Country from './Country';
 import './countrieslist.scss';
 
 const CountriesList = () => (
-  <div>
-    <p>CountriesList</p>
+  <div className="countrieslist">
     <Country />
     <Country />
     <Country />

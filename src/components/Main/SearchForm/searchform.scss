@@ -20,6 +20,7 @@
     border: none;
     background-color: var(--theme-elements);
     color: var(--theme-text);
+    font-family: $font-family;
 
     &::placeholder {
       color: var(--theme-text);

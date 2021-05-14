@@ -1,0 +1,34 @@
+@import '../../../../styles/vars';
+
+.country {
+  border-radius: 0.5em;
+  background-color: var(--theme-elements);
+  margin-bottom: 3em;
+
+  .country-flag {
+    width: 100%;
+    border-radius: 0.5em 0.5em 0 0;
+  }
+
+  .country-data {
+    padding: 2.5em 2em;
+
+    .country-data-name {
+      font-size: $font-size-detail;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1.5em;
+    }
+
+    .country-data-single {
+      display: flex;
+
+      .country-data-title {
+        font-weight: $font-weight-medium;
+        margin-right: 0.25em;
+        margin-bottom: 0.5em;
+      }
+    }
+
+    
+  }
+}
