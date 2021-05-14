@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SearchForm from './SearchForm';
+import SearchForm from '../../containers/SearchForm';
 import FilterForm from '../../containers/FilterForm';
 import CountriesList from '../../containers/CountriesList';
 

@@ -5,11 +5,13 @@ import {
 import {
   GET_FILTERED_COUNTRIES,
   CHANGE_REGION,
+  HANDLE_CHANGE,
 } from 'src/actions/filterCountries';
 
 const initialState = {
   countries: [],
   region: '',
+  inputSearch: '',
 };
 
 const countriesListReducer = (state = initialState, action = {}) => {
@@ -28,6 +30,11 @@ const countriesListReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         region: action.region,
+      };
+    case HANDLE_CHANGE:
+      return {
+        ...state,
+        inputSearch: action.search,
       };
     default: return state;
   }

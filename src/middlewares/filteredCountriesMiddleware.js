@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   FILTER_COUNTRIES,
   getFilteredCountries,
+  FILTER_COUNTRIES_BY_NAME,
 } from 'src/actions/filterCountries';
 import { getAllCountries } from 'src/actions/countriesList';
 
@@ -24,7 +25,30 @@ const filteredCountriesMiddleware = (store) => (next) => (action) => {
       else {
         axios.get(`${apiUrl}/all`)
           .then((response) => {
-            console.log('reponse for loadCountries :', response);
+            store.dispatch(getAllCountries(response.data));
+          })
+          .catch((error) => {
+            console.warn(error);
+          });
+      }
+      next(action);
+      break;
+    }
+    case FILTER_COUNTRIES_BY_NAME: {
+      const { inputSearch } = store.getState().countriesList;
+
+      if (inputSearch) {
+        axios.get(`${apiUrl}/name/${inputSearch}`)
+          .then((response) => {
+            store.dispatch(getFilteredCountries(response.data));
+          })
+          .catch((error) => {
+            console.warn(error);
+          });
+      }
+      else {
+        axios.get(`${apiUrl}/all`)
+          .then((response) => {
             store.dispatch(getAllCountries(response.data));
           })
           .catch((error) => {

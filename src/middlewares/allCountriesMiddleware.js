@@ -12,7 +12,6 @@ const allCountriesMiddleware = (store) => (next) => (action) => {
     case LOAD_COUNTRIES: {
       axios.get(`${apiUrl}/all`)
         .then((response) => {
-          console.log('reponse for loadCountries :', response);
           store.dispatch(getAllCountries(response.data));
         })
         .catch((error) => {
