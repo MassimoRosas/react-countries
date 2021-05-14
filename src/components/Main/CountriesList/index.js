@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import Country from './Country';
 import './countrieslist.scss';
 
-const CountriesList = ({ loadCountries, allCountries }) => {
+const CountriesList = ({ loadCountries, countries }) => {
   useEffect(() => {
     loadCountries();
   }, []);
 
   return (
     <div className="countrieslist">
-      {allCountries.length
-      && (allCountries.map((country) => (
+      {countries.length
+      && (countries.map((country) => (
         <Country
           key={country.name}
           flag={country.flag}
@@ -28,11 +28,11 @@ const CountriesList = ({ loadCountries, allCountries }) => {
 
 CountriesList.propTypes = {
   loadCountries: PropTypes.func.isRequired,
-  allCountries: PropTypes.array,
+  countries: PropTypes.array,
 };
 
 CountriesList.defaultProps = {
-  allCountries: [],
+  countries: [],
 };
 
 export default CountriesList;

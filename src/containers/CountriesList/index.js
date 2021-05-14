@@ -5,7 +5,7 @@ import { loadCountries } from 'src/actions/countriesList';
 
 // === mapStateToProps
 const mapStateToProps = (state) => ({
-  allCountries: state.countriesList.allCountries,
+  countries: state.countriesList.countries,
 });
 
 // === mapDispatchToProps

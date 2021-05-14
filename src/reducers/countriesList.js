@@ -8,7 +8,7 @@ import {
 } from 'src/actions/filterCountries';
 
 const initialState = {
-  allCountries: [],
+  countries: [],
   region: '',
 };
 
@@ -17,12 +17,12 @@ const countriesListReducer = (state = initialState, action = {}) => {
     case GET_ALL_COUNTRIES:
       return {
         ...state,
-        allCountries: action.allCountries,
+        countries: action.countries,
       };
     case GET_FILTERED_COUNTRIES:
       return {
         ...state,
-        allCountries: action.filteredCountries,
+        countries: action.filteredCountries,
       };
     case CHANGE_REGION:
       return {

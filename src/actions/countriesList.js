@@ -6,7 +6,7 @@ export const loadCountries = () => ({
   type: LOAD_COUNTRIES,
 });
 
-export const getAllCountries = (allCountries) => ({
+export const getAllCountries = (countries) => ({
   type: GET_ALL_COUNTRIES,
-  allCountries,
+  countries,
 });
