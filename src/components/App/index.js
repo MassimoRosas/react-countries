@@ -1,9 +1,11 @@
 // == Import npm
 import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
 
 // == Import
 import Header from '../Header';
 import Main from '../Main';
+import Detail from '../Detail';
 import './styles.scss';
 
 // == Composant
@@ -24,7 +26,14 @@ const App = () => {
   return (
     <div className={`app ${theme}`}>
       <Header handleClick={handleClick} />
-      <Main />
+
+      {/* <Route path="/" exact>
+        <Main />
+      </Route> */}
+
+      <Route path="/detail">
+        <Detail />
+      </Route>
     </div>
   );
 };

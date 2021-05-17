@@ -1,0 +1,78 @@
+@import '../../styles/vars';
+
+.detail {
+  padding: 2.5em 2em;
+
+  .detail-button-container {
+    padding-bottom: 1em; 
+
+    .detail-button {
+      background-color: var(--theme-elements);
+      color: var(--theme-text);
+      border: none;
+      padding: 0.5em 2em;
+
+      i {
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  .detail-data {
+
+    .detail-data-flag {
+      padding: 3em 0;
+      width: 100%;
+    }
+
+    .detail-data-name {
+      font-size: $font-size-detail;
+      font-weight: $font-weight-bold;
+      color: var(--theme-text);
+    }
+
+    .detail-data-container {
+      padding: 1.5em 0;
+      color: var(--theme-text);
+
+      .detail-data-single {
+        display: flex;
+        padding: 0.5em 0;
+
+        .detail-data-title {
+          margin-right: 0.25em;
+          font-weight: $font-weight-medium;
+        }
+
+        .detail-data-number {
+
+        }
+      }
+
+      .third {
+        display: flex;
+        flex-direction: column;
+
+        .detail-data-title {
+        }
+
+        .detail-data-list {
+          display: flex;
+          justify-content: space-between;
+          padding: 1.5em 0;
+
+          .detail-data-list-single {
+
+            .detail-data-list-single-button {
+              padding: 0.5em 2em;
+              background-color: var(--theme-elements);
+              color: var(--theme-text);
+              border: none;
+              border-radius: 0.25em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
