@@ -20,65 +20,62 @@ const Detail = ({ countryDetails, isLoading }) => {
           </NavLink>
         </div>
         <div className="detail-data">
-          <img className="detail-data-flag" src={countryDetails[0].flag} alt="#" />
-          <h2 className="detail-data-name">{countryDetails[0].name}</h2>
-          <div className="detail-data-container">
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Native Name:</h3>
-              <span className="detail-data-number">{countryDetails[0].nativeName}</span>
-            </div>
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Population:</h3>
-              <span className="detail-data-number">{handleNumbers(countryDetails[0].population)}</span>
-            </div>
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Region:</h3>
-              <span className="detail-data-number">{countryDetails[0].region}</span>
-            </div>
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Sub Region:</h3>
-              <span className="detail-data-number">{countryDetails[0].subregion}</span>
-            </div>
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Capital:</h3>
-              <span className="detail-data-number">{countryDetails[0].capital}</span>
-            </div>
+          <div className="detail-data-left">
+            <img className="detail-data-flag" src={countryDetails[0].flag} alt="#" />
           </div>
-          <div className="detail-data-container">
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Top Level Domain:</h3>
-              <span className="detail-data-number">{countryDetails[0].topLevelDomain}</span>
+          <div className="detail-data-right">
+            <h2 className="detail-data-name">{countryDetails[0].name}</h2>
+            <div className="detail-data-center">
+              <div className="detail-data-container">
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Native Name:</h3>
+                  <span className="detail-data-number">{countryDetails[0].nativeName}</span>
+                </div>
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Population:</h3>
+                  <span className="detail-data-number">{handleNumbers(countryDetails[0].population)}</span>
+                </div>
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Region:</h3>
+                  <span className="detail-data-number">{countryDetails[0].region}</span>
+                </div>
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Sub Region:</h3>
+                  <span className="detail-data-number">{countryDetails[0].subregion}</span>
+                </div>
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Capital:</h3>
+                  <span className="detail-data-number">{countryDetails[0].capital}</span>
+                </div>
+              </div>
+              <div className="detail-data-container">
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Top Level Domain:</h3>
+                  <span className="detail-data-number">{countryDetails[0].topLevelDomain}</span>
+                </div>
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Currencies:</h3>
+                  <span className="detail-data-number">{countryDetails[0].currencies[0].name}</span>
+                </div>
+                <div className="detail-data-single">
+                  <h3 className="detail-data-title">Languages:</h3>
+                  {countryDetails[0].languages.map((language) => (
+                    <span className="detail-data-number language" key={language}>{language.name}</span>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Currencies:</h3>
-              <span className="detail-data-number">{countryDetails[0].currencies[0].name}</span>
-            </div>
-            <div className="detail-data-single">
-              <h3 className="detail-data-title">Languages:</h3>
-              {countryDetails[0].languages.map((language) => (
-                <span className="detail-data-number language" key={language}>{language.name}</span>
-              ))}
-            </div>
-          </div>
-          <div className="detail-data-container">
-            <div className="detail-data-single third">
-              <h3 className="detail-data-title">Border Countries:</h3>
-              <ul className="detail-data-list">
-                {countryDetails[0].borders.map((border) => (
-                  <li className="detail-data-list-single" key={border}>
-                    <button className="detail-data-list-single-button" type="button">{border}</button>
-                  </li>
-                ))}
-                {/* <li className="detail-data-list-single">
-                  <button className="detail-data-list-single-button" type="button">France</button>
-                </li>
-                <li className="detail-data-list-single">
-                  <button className="detail-data-list-single-button" type="button">France</button>
-                </li>
-                <li className="detail-data-list-single">
-                  <button className="detail-data-list-single-button" type="button">France</button>
-                </li> */}
-              </ul>
+            <div className="detail-data-container">
+              <div className="detail-data-single third">
+                <h3 className="detail-data-title">Border Countries:</h3>
+                <ul className="detail-data-list">
+                  {countryDetails[0].borders.map((border) => (
+                    <li className="detail-data-list-single" key={border}>
+                      <button className="detail-data-list-single-button" type="button">{border}</button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

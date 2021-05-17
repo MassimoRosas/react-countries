@@ -22,6 +22,7 @@ const CountriesList = ({
       {countries.length
       && (countries.map((country) => (
         <NavLink
+          className="country"
           to={`/detail/${country.name}`}
           key={country.name}
           onClick={() => {

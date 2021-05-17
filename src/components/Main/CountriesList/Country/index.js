@@ -15,7 +15,7 @@ const Country = ({
   );
 
   return (
-    <div className="country">
+    <div className="country-container">
       <img className="country-flag" src={flag} alt="#" />
       <div className="country-data">
         <h2 className="country-data-name">{name}</h2>

@@ -64,10 +64,10 @@
           display: flex;
           padding: 1.5em 0;
           flex-wrap: wrap;
-          justify-content: space-between;
 
           .detail-data-list-single {
             margin: 0.5em 0;
+            margin-right: 0.925em;
 
             .detail-data-list-single-button {
               width: 7em;
@@ -77,6 +77,38 @@
               border: none;
               border-radius: 0.25em;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .detail {
+    padding: 5em;
+
+    .detail-data {
+      display: flex;
+
+      .detail-data-left {
+        width: 50%;
+
+        .detail-data-flag {
+          width: 80%;
+        }
+      }
+
+      .detail-data-right {
+        width: 50%;
+        padding-top: 6em;
+
+        .detail-data-center {
+          display: flex;
+          width: 100%;
+
+          .detail-data-container {
+            width: 50%;
           }
         }
       }
