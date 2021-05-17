@@ -4,7 +4,11 @@ import {
   getFilteredCountries,
   FILTER_COUNTRIES_BY_NAME,
 } from 'src/actions/filterCountries';
-import { getAllCountries } from 'src/actions/countriesList';
+import {
+  getAllCountries,
+  LOAD_COUNTRY_DETAILS,
+  getCountryDetails,
+} from 'src/actions/countriesList';
 
 const filteredCountriesMiddleware = (store) => (next) => (action) => {
   const apiUrl = 'https://restcountries.eu/rest/v2';
@@ -50,6 +54,21 @@ const filteredCountriesMiddleware = (store) => (next) => (action) => {
         axios.get(`${apiUrl}/all`)
           .then((response) => {
             store.dispatch(getAllCountries(response.data));
+          })
+          .catch((error) => {
+            console.warn(error);
+          });
+      }
+      next(action);
+      break;
+    }
+    case LOAD_COUNTRY_DETAILS: {
+      const { country } = store.getState().countriesList;
+
+      if (country) {
+        axios.get(`${apiUrl}/name/${country}`)
+          .then((response) => {
+            store.dispatch(getCountryDetails(response.data));
           })
           .catch((error) => {
             console.warn(error);

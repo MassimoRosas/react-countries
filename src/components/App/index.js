@@ -27,11 +27,11 @@ const App = () => {
     <div className={`app ${theme}`}>
       <Header handleClick={handleClick} />
 
-      {/* <Route path="/" exact>
+      <Route path="/" exact>
         <Main />
-      </Route> */}
+      </Route>
 
-      <Route path="/detail">
+      <Route path="/detail/:countryName">
         <Detail />
       </Route>
     </div>

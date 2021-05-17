@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import flag from '../../assets/flag-example.svg';
 import './detail.scss';
@@ -6,9 +7,11 @@ import './detail.scss';
 const Detail = () => (
   <main className="detail">
     <div className="detail-button-container">
-      <button type="button" className="detail-button">
-        <i className="fas fa-long-arrow-alt-left" /><span>Back</span>
-      </button>
+      <NavLink to="/" exact>
+        <button type="button" className="detail-button">
+          <i className="fas fa-long-arrow-alt-left" /><span>Back</span>
+        </button>
+      </NavLink>
     </div>
     <div className="detail-data">
       <img className="detail-data-flag" src={flag} alt="#" />

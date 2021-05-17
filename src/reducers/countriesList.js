@@ -1,5 +1,7 @@
 import {
   GET_ALL_COUNTRIES,
+  SAVE_COUNTRY,
+  GET_COUNTRY_DETAILS,
 } from 'src/actions/countriesList';
 
 import {
@@ -12,6 +14,8 @@ const initialState = {
   countries: [],
   region: '',
   inputSearch: '',
+  country: '',
+  countryDetails: [],
 };
 
 const countriesListReducer = (state = initialState, action = {}) => {
@@ -35,6 +39,16 @@ const countriesListReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         inputSearch: action.search,
+      };
+    case SAVE_COUNTRY:
+      return {
+        ...state,
+        country: action.country,
+      };
+    case GET_COUNTRY_DETAILS:
+      return {
+        ...state,
+        countryDetails: action.countryDetails,
       };
     default: return state;
   }
