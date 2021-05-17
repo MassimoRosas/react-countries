@@ -47,6 +47,10 @@
         .detail-data-number {
 
         }
+
+        .language {
+          margin: 0 0.25em 0 0;
+        }
       }
 
       .third {
@@ -58,12 +62,15 @@
 
         .detail-data-list {
           display: flex;
-          justify-content: space-between;
           padding: 1.5em 0;
+          flex-wrap: wrap;
+          justify-content: space-between;
 
           .detail-data-list-single {
+            margin: 0.5em 0;
 
             .detail-data-list-single-button {
+              width: 7em;
               padding: 0.5em 2em;
               background-color: var(--theme-elements);
               color: var(--theme-text);

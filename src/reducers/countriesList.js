@@ -16,6 +16,7 @@ const initialState = {
   inputSearch: '',
   country: '',
   countryDetails: [],
+  isLoading: true,
 };
 
 const countriesListReducer = (state = initialState, action = {}) => {
@@ -49,6 +50,7 @@ const countriesListReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         countryDetails: action.countryDetails,
+        isLoading: false,
       };
     default: return state;
   }

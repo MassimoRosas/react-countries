@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom';
 // == Import
 import Header from '../Header';
 import Main from '../Main';
-import Detail from '../Detail';
+import Detail from '../../containers/Detail';
 import './styles.scss';
 
 // == Composant

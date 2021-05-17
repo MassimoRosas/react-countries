@@ -6,7 +6,6 @@ import { loadCountries, saveCountry, loadCountryDetails } from 'src/actions/coun
 // === mapStateToProps
 const mapStateToProps = (state) => ({
   countries: state.countriesList.countries,
-  countryName: state.countriesList.country,
 });
 
 // === mapDispatchToProps

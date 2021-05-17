@@ -9,7 +9,6 @@ const CountriesList = ({
   loadCountries,
   countries,
   saveCountry,
-  countryName,
   loadCountryDetails,
 }) => {
   useEffect(() => {
@@ -47,13 +46,7 @@ CountriesList.propTypes = {
   loadCountries: PropTypes.func.isRequired,
   countries: PropTypes.array.isRequired,
   saveCountry: PropTypes.func.isRequired,
-  countryName: PropTypes.string.isRequired,
   loadCountryDetails: PropTypes.func.isRequired,
 };
-
-// CountriesList.defaultProps = {
-//   countries: [],
-//   countryName: '',
-// };
 
 export default CountriesList;
