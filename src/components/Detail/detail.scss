@@ -71,11 +71,12 @@
 
             .detail-data-list-single-button {
               width: 7em;
-              padding: 0.5em 2em;
+              padding: 0.5em 0;
               background-color: var(--theme-elements);
               color: var(--theme-text);
               border: none;
               border-radius: 0.25em;
+              text-align: center;
             }
           }
         }

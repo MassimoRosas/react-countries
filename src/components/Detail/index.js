@@ -2,12 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import countriesData from '../../assets/data/countries.json';
 import './detail.scss';
 
 const Detail = ({ countryDetails, isLoading }) => {
   const handleNumbers = (number) => (
     number.toString().replace(/(\d)(?=(\d{3})+\b)/g, '$1 ')
   );
+
+  const filteredCountriesData = (data) => countriesData.filter((country) => country.code === data);
 
   if (!isLoading) {
     return (
@@ -71,7 +74,7 @@ const Detail = ({ countryDetails, isLoading }) => {
                 <ul className="detail-data-list">
                   {countryDetails[0].borders.map((border) => (
                     <li className="detail-data-list-single" key={border}>
-                      <button className="detail-data-list-single-button" type="button">{border}</button>
+                      <button className="detail-data-list-single-button" type="button">{filteredCountriesData(border)[0].name ? filteredCountriesData(border)[0].name : 'Unknown'}</button>
                     </li>
                   ))}
                 </ul>
@@ -82,7 +85,7 @@ const Detail = ({ countryDetails, isLoading }) => {
       </main>
     );
   }
-  return ('blabla');
+  return ('');
 };
 
 Detail.propTypes = {
